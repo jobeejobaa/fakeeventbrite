@@ -8,3 +8,76 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+.navbar-violet {
+    background-color: #3d1a5a; /* fond violet foncé */
+    border-bottom: 3px solid #7b2cbf; /* une bordure violet clair élégante */
+    }
+
+.navbar-violet .navbar-brand {
+    color: #f3e9ff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    }
+
+.navbar-violet .navbar-nav .nav-link {
+    color: #e8d6ff;
+    }
+
+.navbar-violet .navbar-nav .nav-link:hover {
+    color: #d0a2ff;
+    }
+
+.navbar-violet .dropdown-menu {
+    background-color: #3d1a5a;
+    }
+
+.navbar-violet .dropdown-item {
+    color: #f3e9ff;
+    }
+
+.navbar-violet .dropdown-item:hover {
+    background-color: #7b2cbf;
+    color: white;
+    }
+
+
+body {
+    background-color: #1c0f2e; /* violet très foncé */
+    color: #f3e9ff;
+    text-align: center; /* centre tout le texte */
+    }
+
+.main-box {
+    border: 2px solid #7b2cbf;
+    border-radius: 12px;
+    background-color: #2a1444;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+.navbar {
+    background-color: #3d1a5a; /* violet moyen pour la barre */
+    }
+
+.btn-primary {
+    background-color: #7b2cbf;
+    border-color: #7b2cbf;
+    }
+
+.btn-primary:hover {
+    background-color: #9d4edd;
+    border-color: #9d4edd;
+    }
+
+h1, h2, h3 {
+    color: #d0a2ff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+
+a {
+    color: #c77dff;
+    }
+
+a:hover {
+    color: #e0aaff;
+    }
