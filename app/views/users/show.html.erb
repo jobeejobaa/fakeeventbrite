@@ -1,0 +1,53 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <!-- Titre -->
+      <h1 class="mb-4">👤 Mon Profil</h1>
+
+      <!-- Infos utilisateur -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Informations personnelles</h5>
+          <p class="mb-2">
+            <strong>Prénom:</strong> <%= @user.first_name %>
+          </p>
+          <p class="mb-2">
+            <strong>Nom:</strong> <%= @user.last_name %>
+          </p>
+          <p class="mb-2">
+            <strong>Email:</strong> <%= @user.email %>
+          </p>
+          <p class="mb-2">
+            <strong>Description:</strong> 
+            <br>
+            <%= @user.description || "Aucune description" %>
+          </p>
+        </div>
+      </div>
+
+      <!-- Mes événements -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Mes événements</h5>
+          <% if @user.events.any? %>
+            <ul class="list-group">
+              <% @user.events.each do |event| %>
+                <li class="list-group-item">
+                  <%= link_to event.title, event_path(event) %>
+                </li>
+              <% end %>
+            </ul>
+          <% else %>
+            <p class="text-muted">Vous n'avez pas créé d'événement pour le moment.</p>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="d-flex gap-2">
+        <%= link_to "✏️ Éditer email/mot de passe", edit_user_registration_path, class: "btn btn-primary" %>
+        <%= link_to "🔙 Retour aux événements", root_path, class: "btn btn-secondary" %>
+      </div>
+    </div>
+  </div>
+</div>
