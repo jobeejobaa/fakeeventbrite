@@ -69,4 +69,8 @@ class EventsController < ApplicationController
     def event_params
       params.expect(event: [ :title, :description, :start_date, :duration, :price, :location ])
     end
+
+  def authorize_user!
+    redirect_to events_path, alert: "You are not authorized to do this." unless @event.user == current_user
+  end
 end
